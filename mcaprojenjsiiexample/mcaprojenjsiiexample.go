@@ -8,6 +8,10 @@ import (
 
 // My Hello class.
 type Hello interface {
+	// My sayGodbye function.
+	//
+	// Returns: Godbye.
+	SayGodbye(name *string) *string
 	// My sayHello function.
 	//
 	// Returns: Greetings.
@@ -41,6 +45,19 @@ func NewHello_Override(h Hello) {
 		nil, // no parameters
 		h,
 	)
+}
+
+func (h *jsiiProxy_Hello) SayGodbye(name *string) *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		h,
+		"sayGodbye",
+		[]interface{}{name},
+		&returns,
+	)
+
+	return returns
 }
 
 func (h *jsiiProxy_Hello) SayHello(name *string) *string {

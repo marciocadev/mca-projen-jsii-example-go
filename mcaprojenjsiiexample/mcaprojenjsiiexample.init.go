@@ -11,6 +11,7 @@ func init() {
 		"mca-projen-jsii-example.Hello",
 		reflect.TypeOf((*Hello)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "sayGodbye", GoMethod: "SayGodbye"},
 			_jsii_.MemberMethod{JsiiMethod: "sayHello", GoMethod: "SayHello"},
 		},
 		func() interface{} {
