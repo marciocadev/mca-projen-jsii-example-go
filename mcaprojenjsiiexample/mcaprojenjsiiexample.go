@@ -8,6 +8,9 @@ import (
 
 // My Hello class.
 type Hello interface {
+	// My sayHello function.
+	//
+	// Returns: Greetings.
 	SayHello(name *string) *string
 }
 
@@ -40,9 +43,6 @@ func NewHello_Override(h Hello) {
 	)
 }
 
-// My sayHello function.
-//
-// Returns: Greetings
 func (h *jsiiProxy_Hello) SayHello(name *string) *string {
 	var returns *string
 
